@@ -1,6 +1,6 @@
 package net.tnemc.core.economy.strict.account;
 
-import com.sun.istack.internal.NotNull;
+import org.jetbrains.annotations.NotNull;
 import net.tnemc.core.economy.strict.currency.Currency;
 import net.tnemc.core.economy.strict.result.HoldingsActionResult;
 import net.tnemc.core.economy.strict.result.HoldingsMoveActionResult;

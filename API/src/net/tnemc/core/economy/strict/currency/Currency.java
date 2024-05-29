@@ -1,6 +1,6 @@
 package net.tnemc.core.economy.strict.currency;
 
-import com.sun.istack.internal.NotNull;
+import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
 /**

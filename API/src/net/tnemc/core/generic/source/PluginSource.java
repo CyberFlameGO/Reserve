@@ -1,6 +1,6 @@
 package net.tnemc.core.generic.source;
 
-import com.sun.istack.internal.NotNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by creatorfromhell on 8/9/2017.

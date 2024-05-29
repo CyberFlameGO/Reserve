@@ -23,7 +23,7 @@ package net.tnemc.core.economy.strict;
  * it at <https://www.gnu.org/licenses/lgpl-3.0.txt>.
  **/
 
-import com.sun.istack.internal.NotNull;
+import org.jetbrains.annotations.NotNull;
 import net.tnemc.core.economy.strict.account.Account;
 import net.tnemc.core.economy.strict.account.UniqueAccount;
 import net.tnemc.core.economy.strict.currency.Currency;
@@ -47,10 +47,10 @@ public interface EconomyAdapter {
 
   /**
    * This is used to determine if Reserve should register a Vault provider for a given {@link EconomyAdapter}.
-   * 
+   *
    * @return True if this provider should automatically register a Vault provider. This removes the
    * requirement for you to register a Vault and Reserve Economy Provider.
-   * 
+   *
    * @since 1.0.0
    */
   boolean vault();

@@ -66,33 +66,13 @@
         </plugins>
     </build>
 
-    <organization>
-        <name>The New Economy</name>
-        <url>https://tnemc.net</url>
-    </organization>
 
-    <developers>
-        <developer>
-            <id>creatorfromhell</id>
-            <name>Daniel "creatorfromhell" Vidmar</name>
-            <email>daniel.viddy@gmail.com</email>
-            <url>https://cfh.dev</url>
-            <organization>The New Economy</organization>
-            <organizationUrl>https://tnemc.net</organizationUrl>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>America/New_York</timezone>
-        </developer>
-    </developers>
-    <distributionManagement>
-        <repository>
-            <id>codemc-releases</id>
-            <url>https://repo.codemc.io/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>codemc-snapshots</id>
-            <url>https://repo.codemc.io/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>24.1.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>
