@@ -59,7 +59,7 @@ public abstract class TNECommand {
 
   public String[] getHelpLines() {
     Message message = new Message(getHelp());
-    return message.grabWithNew(Reserve.instance().defaultWorld, null);
+    return message.grabWithNew(null);
   }
 
   public void help(CommandSender sender) {
@@ -137,7 +137,6 @@ public abstract class TNECommand {
   }
 
   public boolean execute(CommandSender sender, String command, String[] arguments) {
-    String world = Reserve.instance().defaultWorld;
 
     if(arguments.length == 0) {
       help(sender);
@@ -149,7 +148,7 @@ public abstract class TNECommand {
       Message noCommand = new Message("Messages.Command.None");
       noCommand.addVariable("$commands", "/" + getName());
       noCommand.addVariable("$arguments", arguments[0]);
-      noCommand.translate(world, sender);
+      noCommand.translate(sender);
       return false;
     }
 
@@ -169,7 +168,7 @@ public abstract class TNECommand {
     if(!sub.canExecute(sender)) {
       Message unable = new Message("Messages.Command.Unable");
       unable.addVariable("$commands", "/" + getName());
-      unable.translate(world, sender);
+      unable.translate(sender);
       return false;
     }
     return sub.execute(sender, command, removeSub(arguments));

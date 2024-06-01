@@ -15,11 +15,9 @@ import java.util.UUID;
 public class VaultAdapter implements Economy {
 
   private final EconomyAdapter api;
-  private final String world;
 
   public VaultAdapter(EconomyAdapter api) {
     this.api = api;
-    this.world = Reserve.instance().defaultWorld;
   }
 
   @Override

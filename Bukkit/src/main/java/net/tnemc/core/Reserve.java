@@ -5,7 +5,6 @@ import net.tnemc.core.command.CommandManager;
 import net.tnemc.core.command.TNECommand;
 import net.tnemc.core.command.reserve.ReserveCommand;
 import net.tnemc.core.economy.strict.EconomyAdapter;
-import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -47,7 +46,6 @@ public class Reserve extends JavaPlugin {
 
   private String ecoProvider = "";
 
-  public String defaultWorld = "Default";
 
   public void onLoad() {
     instance = this;
@@ -61,10 +59,7 @@ public class Reserve extends JavaPlugin {
     if(!ConfigurationManager.loadSettings()) {
       // Failed to load configuration. You decide what to do.
     }
-    defaultWorld = Bukkit.getServer().getWorlds().get(0).getName();
     registerCommand(new String[]{"reserve", "rsv"}, new ReserveCommand(this));
-
-    new Metrics(this, 2586);
   }
 
   public static Reserve instance() {

@@ -87,7 +87,7 @@ public class Message {
     return ChatColor.translateAlternateColorCodes('&', message);
   }
 
-  public String grab(String world, CommandSender sender) {
+  public String grab(CommandSender sender) {
     String message = this.node;
 
     for(Map.Entry<String, String> entry : variables.entrySet()) {
@@ -96,7 +96,7 @@ public class Message {
     return message;
   }
 
-  public String[] grabWithNew(String world, CommandSender sender) {
+  public String[] grabWithNew(CommandSender sender) {
     String[] message = new String[]{this.node};
 
     String[] formatted = new String[message.length];
@@ -114,7 +114,7 @@ public class Message {
     return formatted;
   }
 
-  public void translate(String world, CommandSender sender) {
+  public void translate(CommandSender sender) {
     if(sender == null) { return; }
 
     String[] message = new String[]{this.node};
